@@ -79,6 +79,9 @@
 # print(gcd(48, 18))  # 6
 # print(gcd(101, 10))  # 1
 
+
+
+
 # # Find LCM of two numbers
 # def find_gcd(a, b):
 #     while b:
@@ -113,14 +116,14 @@
 # print(sum_of_digits(0))     # 0
 
 # #check the count of occurrences of a character in a string
-# text = "banana"
-# counts = {}
+text = "banana"
+counts = {}
 
-# for char in text:
-#     counts[char] = counts.get(char, 0) + 1
+for char in text:
+    counts[char] = counts.get(char, 0) + 1
 
-# print(counts)
-# # Output: {'b': 1, 'a': 3, 'n': 2}
+print(counts)
+# Output: {'b': 1, 'a': 3, 'n': 2}
 
 
 # # Find largest element in a list
