@@ -1,0 +1,8 @@
+2026-02-11 16:53:14,498 - ERROR - Exception occurred: Invalid value: Value cannot be negative.
+Traceback (most recent call last):
+  File "C:\Users\Adnan\Desktop\Python Basics\Modules\logging_module.py", line 47, in <module>
+    fun(v1)
+    ~~~^^^^
+  File "C:\Users\Adnan\Desktop\Python Basics\Modules\logging_module.py", line 40, in fun
+    raise ValueError("Invalid value: Value cannot be negative.")
+ValueError: Invalid value: Value cannot be negative.

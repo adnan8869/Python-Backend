@@ -1,0 +1,5 @@
+2026-02-12 10:41:22,729 | my_app | DEBUG | This is a debug message
+2026-02-12 10:41:22,729 | my_app | INFO | Application started
+2026-02-12 10:41:22,729 | my_app | WARNING | Low memory warning
+2026-02-12 10:41:22,729 | my_app | ERROR | Database connection failed
+2026-02-12 10:41:22,729 | my_app | CRITICAL | System crash
