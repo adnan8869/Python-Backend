@@ -16,3 +16,12 @@ text = "Contact us at support@example.com or info@site.org"
 all_emails = re.findall(r'[\w\.-]+@[\w\.-]+', text)
 print(all_emails)
 
+
+
+
+
+
+
+
+# result = re.findall("P..t", "Pinvgugt Peit Pit Pot")
+# print(result)
