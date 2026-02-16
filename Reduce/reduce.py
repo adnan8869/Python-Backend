@@ -27,3 +27,5 @@ print(result) # 10
 # import operator
 # result = reduce(operator.mul, [1, 2, 3, 4]) 
 # print(result) # 24
+
+
