@@ -153,3 +153,84 @@
 
 
 
+
+
+#  Write a function that takes a "deeply nested" list and returns a single "flat" list.
+# [1, [2, 3], [4, [5, 6]], 7]  -> [1, 2, 3, 4, 5, 6, 7]
+def flatten_list(nested_data):
+    flat_list = []
+    
+    for item in nested_data:
+        # Check if the current item is a list
+        if isinstance(item, list):
+            # If item is list then extend
+            flat_list.extend(flatten_list(item))
+        else:
+            # If is not a list then append
+            flat_list.append(item)
+           
+    return flat_list
+
+input_data = [1, [2, 3], [4, [5, 6]], 7]
+print(f"Flattened: {flatten_list(input_data)}")
+# Output: [1, 2, 3, 4, 5, 6, 7]
+
+
+
+# Longest Substring Without Repeating Characters
+# def length_of_longest_substring(s: str) -> int:
+#     # Dictionary to store the last seen index of each character
+#     char_map = {}
+#     left = 0
+#     max_length = 0
+
+#     for right in range(len(s)):
+#         current_char = s[right]
+
+#         # If we've seen this character before AND it's inside our current window
+#         if current_char in char_map and char_map[current_char] >= left:
+#             # Move the left pointer to the right of the previous occurrence
+#             left = char_map[current_char] + 1
+        
+#         # Update/Add the character's last seen position
+#         char_map[current_char] = right
+        
+#         # Calculate window size and update max_length
+#         current_window_size = right - left + 1
+#         max_length = max(max_length, current_window_size)
+
+#     return max_length
+
+# # Test cases
+# print(length_of_longest_substring("abcabcbb"))  # Output: 3 ("abc")
+# print(length_of_longest_substring("bbbbb"))     # Output: 1 ("b")
+# print(length_of_longest_substring("pwwkew"))    # Output: 3 ("wke")
+
+
+
+# Given a list of strings, group the anagrams together. (An anagram is a word formed by rearranging the letters of another,
+#  like "eat" and "tea").
+# Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+# Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+from collections import defaultdict
+
+def group_anagrams(strs: list[str]) -> list[list[str]]:
+    # Create a dictionary where the values are lists
+    anagram_map = defaultdict(list)
+
+    for s in strs:
+        # 1. Sort the string to create a unique key
+        # sorted("eat") returns ['a', 'e', 't']
+        # "".join() turns it back into the string "aet"
+        sorted_key = "".join(sorted(s))
+        
+        # 2. Add the original string to the list for that key
+        anagram_map[sorted_key].append(s)
+
+    # 3. Return only the values (the groups of anagrams)
+    return list(anagram_map.values())
+
+# Test Case
+input_words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+print(group_anagrams(input_words))
+# Output: [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]

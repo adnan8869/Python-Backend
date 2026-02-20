@@ -8,7 +8,7 @@ def calc_square(numbers, square_result , v):
 
 if __name__ == "__main__":
     numbers = [2, 3, 4, 5]
-    # Using multiprocessing.Array to share data between processes( data type, size)
+    # Using multiprocessing.Array to share data between processes (data type, size)
     square_result = multiprocessing.Array('i', len(numbers)) 
      # Value can be used to share a single value between processes
     v= multiprocessing.Value('i', 0)  

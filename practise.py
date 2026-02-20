@@ -1,11 +1,10 @@
 # # reverse a string
 # def reverse_string(s):
-#     return s[::-1]  
+#     return s[::-1]
 # # example usage
 # test_string = "Hello, World!"
 # print("Original String:", test_string)
 # print("Reversed String:", reverse_string(test_string))
-
 
 
 # #check string is palindrome or not
@@ -18,7 +17,7 @@
 
 # # find factorial of a number
 # def factorial_best(n):
-#     if n < 0: 
+#     if n < 0:
 #         return None # Factorials don't exist for negatives
 #     res = 1
 #     for i in range(2, n + 1): # Start at 2 because multiplying by 1 changes nothing
@@ -32,42 +31,39 @@
 # def is_prime(num):
 #     if num < 2:
 #         return False
-    
+
 #     # Check if any number from 2 up to num-1 divides it
 #     for i in range(2, int(num**0.5) + 1):
 #         if num % i == 0:
 #             return False
-            
+
 #     return True
 
 # # The range you want to check
 # for n in range(10, 51):
 #     if is_prime(n):
-#         print(n, end=" ") 
+#         print(n, end=" ")
 # # Output: 11 13 17 19 23 29 31 37 41 43 47
 
 
-
-#Check Armstrong number
+# Check Armstrong number
 # def is_armstrong_math(num):
 #     original_num = num
 #     num_digits = len(str(num)) # You still need the count of digits
 #     total = 0
-    
+
 #     temp = num
 #     while temp > 0:
 #         digit = temp % 10          # Get the last digit
 #         total += digit ** num_digits
 #         temp //= 10                # Remove the last digit
-        
+
 #     return total == original_num
 
 # # Test
 # print(is_armstrong_math(153))  # True
 # print(is_armstrong_math(9474)) # True (9^4 + 4^4 + 7^4 + 4^4 = 9474)
 # print(is_armstrong_math(123))  # False
-
-
 
 
 # # Find GCD of two numbers
@@ -78,8 +74,6 @@
 
 # print(gcd(48, 18))  # 6
 # print(gcd(101, 10))  # 1
-
-
 
 
 # # Find LCM of two numbers
@@ -130,18 +124,16 @@ print(counts)
 # def find_largest(nums):
 #     # Assume the first number is the largest
 #     largest = nums[0]
-    
+
 #     for n in nums:
 #         if n > largest:
 #             # If we find a bigger number, update the 'largest' variable
 #             largest = n
-            
+
 #     return largest
 
 # numbers = [10, 45, 2, 99, 105, 7]
 # print(find_largest(numbers)) # Output: 105
-
-
 
 
 # # # Find smallest element in a list
@@ -152,10 +144,9 @@ print(counts)
 # #     for num in lst:
 # #         if num < smallest:
 # #             smallest = num
-# #     return smallest 
+# #     return smallest
 # # print(find_smallest([3, 1, 4, 1, 5, 9, 2, 6]))  # 1
 # # print(find_smallest([]))  # None
-
 
 
 # # #sum of all elements in a list
@@ -163,7 +154,6 @@ print(counts)
 # #     return sum(lst)
 # # print(sum_of_list([1, 2, 3, 4, 5]))  # 15
 # # print(sum_of_list([]))  # 0
-
 
 
 # # Find second largest element in a list
@@ -189,28 +179,26 @@ print(counts)
 # print(get_second_largest(numbers)) # Output: 45
 
 
-
-
 # #Find pairs in a list whose sum is equal to a given number
 def find_pairs(nums, target):
     seen = set()
     pairs = []
-    
+
     for num in nums:
         complement = target - num  # What number do we need?
-        
+
         if complement in seen:
             pairs.append((complement, num))
-        
+
         seen.add(num)  # Remember this number for later
-        
+
     return pairs
+
 
 numbers = [2, 4, 3, 5, 7, 8, 9]
 target_sum = 7
-print(find_pairs(numbers, target_sum)) 
+print(find_pairs(numbers, target_sum))
 # Output: [(3, 4), (2, 5)]
-
 
 
 # # Remove duplicates from a list
