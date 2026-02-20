@@ -3,11 +3,14 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
-    "python.formatting.provider": "black",
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
         "editor.tabSize": 4,
         "editor.insertSpaces": true
-    }
+    },
+    "python-envs.pythonProjects": [],
+    "black-formatter.path": [
+        "${workspaceFolder}\\.venv\\Scripts\\black.exe"
+    ]
 }
