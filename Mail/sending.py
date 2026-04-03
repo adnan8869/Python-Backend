@@ -24,8 +24,6 @@ This email includes both plain text and HTML versions for better deliverability.
 Best regards,
 Adnan"""
 
-
-# Add both content types
 message.content = [
     Content("text/plain", plain_text),
 ]
